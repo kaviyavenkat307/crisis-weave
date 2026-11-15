@@ -1,0 +1,31 @@
+{
+  "id": "/",
+  "name": "CrisisWeave Disaster Intelligence",
+  "short_name": "CrisisWeave",
+  "description": "AI-Powered Disaster Intelligence and Smart Relief Coordination Network with offline emergency reporting.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1E3043",
+  "background_color": "#F5F7F7",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

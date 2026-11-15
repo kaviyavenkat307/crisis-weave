@@ -1,0 +1,8 @@
+{
+  "name": "CrisisWeave",
+  "description": "AI-Powered Disaster Intelligence and Smart Relief Coordination Network. Turning disaster chaos into coordinated action.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

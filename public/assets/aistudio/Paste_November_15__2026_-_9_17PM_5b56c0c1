@@ -1,0 +1,1471 @@
+# CRISISWEAVE – COMPLETE WEBSITE DEVELOPMENT SPECIFICATION
+
+## 1. PROJECT OVERVIEW
+
+### Project Name
+CrisisWeave
+
+### Full Project Title
+AI-Powered Disaster Intelligence and Smart Relief Coordination Network.
+
+### Tagline
+Turning Disaster Chaos into Coordinated Action.
+
+### Project Category
+Artificial Intelligence, Cybersecurity, Disaster Management, Social Impact, Resource Optimisation and Geospatial Intelligence.
+
+### Project Type
+Advanced, full-stack, software-based web application.
+
+### Main Goal
+To develop a unified disaster-response platform that collects emergency information, analyses and verifies reports, identifies urgent needs, coordinates available resources and tracks relief delivery.
+
+The platform must support disaster-response coordination during:
+- Floods
+- Cyclones
+- Landslides
+- Earthquakes
+- Severe storms
+- Other large-scale emergencies
+
+The initial demonstration will focus on a simulated Chennai flood scenario.
+
+---
+
+## 2. PROBLEM STATEMENT
+
+During natural disasters such as floods and cyclones, emergency reports, affected-community requirements, available relief supplies, volunteers and relief operations are often managed through separate communication channels and organisations.
+
+This fragmented approach can cause delays in identifying urgent needs, duplicate reports, inefficient resource distribution, unverified information, poor coordination and limited visibility into relief operations.
+
+There is a need for a centralised and intelligent platform that connects affected communities with relief organisations and helps emergency coordinators make informed decisions.
+
+The main challenge is not only the availability of resources but also the ability to identify, verify and deliver the right resources to the right people at the right time.
+
+## 3. PROPOSED SOLUTION
+
+CrisisWeave is an AI-powered disaster intelligence and relief coordination platform that connects citizens, NGOs, hospitals, volunteers and emergency coordinators through a unified digital ecosystem.
+
+The platform uses AI to classify emergency reports, detect potential duplicates, identify priority cases and estimate short-term resource requirements.
+
+Its cybersecurity layer supports secure access, evidence validation, suspicious activity detection and activity tracking.
+
+An intelligent resource allocation engine recommends suitable relief supplies based on urgency, availability, quantity and geographical factors.
+
+Interactive GIS maps, predictive analytics, Digital Twin scenario simulations and offline emergency reporting provide additional decision-support capabilities.
+
+The complete process can be followed from emergency report submission to verification, resource allocation, dispatch and delivery confirmation.
+
+## 4. TARGET USERS AND USER ROLES
+
+Implement role-based authentication with the following five user types.
+
+### A. Citizen
+
+Citizens are people affected by a disaster or people reporting an emergency on behalf of others.
+
+Features:
+- Register and log in.
+- Submit emergency reports.
+- Select disaster category.
+- Enter location.
+- Add description.
+- Enter number of affected people.
+- Select required resources.
+- Upload supporting photographs.
+- View submitted reports.
+- Track report verification status.
+- View allocation and delivery progress.
+- Receive status notifications.
+- Save reports offline when internet connectivity is unavailable.
+
+Citizen dashboard:
+- My emergency reports.
+- Current report status.
+- Available relief updates.
+- Notifications.
+- Emergency report submission button.
+
+### B. NGO / Relief Organisation
+
+NGOs and relief organisations provide resources and support.
+
+Features:
+- Organisation registration.
+- Organisation profile management.
+- Location management.
+- Add available inventory.
+- Update stock quantities.
+- View incoming resource requests.
+- Accept or reject proposed assistance.
+- View allocation details.
+- Update dispatch status.
+- Confirm resource availability.
+- View previous relief contributions.
+- Track deliveries.
+
+NGO dashboard:
+- Total available stock.
+- Incoming requests.
+- Pending allocations.
+- Active shipments.
+- Completed deliveries.
+- Inventory shortage alerts.
+
+### C. Volunteer
+
+Volunteers support relief activities.
+
+Features:
+- Volunteer registration.
+- Add skills and experience.
+- Add location.
+- Set availability.
+- View assigned tasks.
+- Accept or decline tasks.
+- Update task progress.
+- View emergency assignments.
+- Receive notifications.
+
+Volunteer dashboard:
+- Assigned tasks.
+- Available tasks.
+- Completed tasks.
+- Availability status.
+- Task history.
+
+### D. Hospital
+
+Hospitals and medical centres can share medical resource requirements and capacity information.
+
+Features:
+- Hospital registration.
+- Hospital profile.
+- Location and contact details.
+- Available bed capacity.
+- Medical supply requirements.
+- Medicine and equipment requests.
+- Emergency medical requests.
+- Request status tracking.
+
+Hospital dashboard:
+- Bed availability.
+- Pending medical requests.
+- Available medical supplies.
+- Incoming allocations.
+- Emergency request status.
+
+### E. Admin / Emergency Coordinator
+
+This is the main control centre of the application.
+
+Features:
+- View all registered users.
+- Manage NGOs, volunteers and hospitals.
+- View all emergency reports.
+- Verify or reject reports with reasons.
+- Review AI classification.
+- Review duplicate detection results.
+- Review suspicious activity alerts.
+- Manage incidents.
+- Monitor resource inventories.
+- Approve or reject allocations.
+- Monitor shipments.
+- View GIS maps.
+- View demand predictions.
+- Run Digital Twin simulations.
+- View analytics and reports.
+- Review audit logs.
+- Manage disaster scenarios.
+
+Admin dashboard:
+- Total reports.
+- Verified incidents.
+- Critical incidents.
+- Pending verification.
+- Registered organisations.
+- Available relief resources.
+- Pending allocations.
+- Active shipments.
+- Completed deliveries.
+- Suspicious activity alerts.
+
+---
+
+## 5. COMPLETE MODULES AND FEATURES
+
+### MODULE 1 – AI-POWERED CRISIS INTELLIGENCE
+
+Purpose:
+Reduce manual work by automatically analysing emergency reports.
+
+Features:
+
+1. Emergency classification:
+   - Flood
+   - Cyclone
+   - Landslide
+   - Medical emergency
+   - Food shortage
+   - Drinking water shortage
+   - Shelter requirement
+   - Rescue requirement
+   - Other emergency
+
+2. Information extraction:
+   - Location
+   - Disaster category
+   - Resource requirement
+   - Number of affected people
+   - Urgency indicators
+   - Important keywords
+
+3. Duplicate report detection:
+   - Compare report descriptions.
+   - Compare geographical proximity.
+   - Compare submission timestamps.
+   - Identify reports that may refer to the same incident.
+   - Link potential duplicates to a common incident.
+   - Preserve all original submissions.
+
+4. AI-assisted priority scoring:
+   Consider:
+   - Life-threatening urgency.
+   - Medical emergency.
+   - Number of people affected.
+   - Vulnerable population.
+   - Waiting time.
+   - Accessibility of the affected area.
+
+Priority levels:
+- Critical
+- High
+- Medium
+- Low
+
+5. Explainable AI:
+   Display why the system suggested a priority level.
+
+Example:
+"Critical priority suggested because the report mentions trapped residents, medical assistance and multiple affected families."
+
+Important:
+AI classifications and priority scores are recommendations. Coordinators must verify reports and make final decisions.
+
+### MODULE 2 – TRUSTSHIELD CYBERSECURITY SYSTEM
+
+Module name: TrustShield.
+
+Purpose:
+Improve the security, integrity and reliability of disaster information.
+
+Features:
+
+1. Secure authentication.
+2. Password hashing.
+3. Role-based access control.
+4. Protected sessions.
+5. API access control.
+6. Login rate limiting.
+7. File upload validation.
+8. Evidence integrity checking.
+9. Duplicate image detection.
+10. Suspicious activity detection.
+11. Inventory transaction anomaly detection.
+12. Complete audit logs.
+
+Evidence validation:
+- Validate file extensions.
+- Validate MIME types.
+- Restrict file size.
+- Calculate SHA-256 hashes.
+- Detect repeated evidence using hashes.
+- Optionally use perceptual image hashes to identify visually similar uploads.
+
+Suspicious activity examples:
+- Many reports submitted from one account within a short period.
+- Repeated identical evidence.
+- Unusual inventory changes.
+- Repeated failed login attempts.
+- Multiple suspicious requests for the same incident.
+
+Security alerts:
+- Normal
+- Needs Review
+- Suspicious
+
+The system must not automatically label a person as fraudulent. Suspicious activity should be flagged for administrator review.
+
+Audit log fields:
+- Actor ID.
+- Action.
+- Entity type.
+- Entity ID.
+- Timestamp.
+- Previous value, where relevant.
+- New value, where relevant.
+- Review or decision information.
+
+### MODULE 3 – INTELLIGENT RESOURCE OPTIMISATION
+
+Purpose:
+Help coordinators distribute limited resources effectively.
+
+Resources include:
+- Drinking water.
+- Food packets.
+- Medicines.
+- Medical kits.
+- Clothes.
+- Blankets.
+- Shelter materials.
+- Rescue equipment.
+
+Features:
+
+1. NGO inventory management.
+2. Resource quantity tracking.
+3. Verified emergency resource requests.
+4. Resource availability comparison.
+5. Priority-based allocation recommendations.
+6. Location-based matching.
+7. Inventory shortage identification.
+8. Unmet demand calculation.
+9. Allocation approval workflow.
+10. Shipment creation.
+
+Optimisation factors:
+- Request priority.
+- Quantity required.
+- Available stock.
+- Distance or estimated travel cost.
+- Resource type.
+- Organisation availability.
+- Delivery feasibility.
+
+Use Google OR-Tools for optimisation where feasible.
+
+Example:
+
+Verified request:
+- Area: Example flood-affected location.
+- Water required: 500 units.
+- Food required: 200 packets.
+- Priority: Critical.
+
+Available inventory:
+- NGO A: 300 water units.
+- NGO B: 200 water units.
+- NGO C: 200 food packets.
+
+System recommendation:
+- NGO A supplies 300 water units.
+- NGO B supplies 200 water units.
+- NGO C supplies 200 food packets.
+
+The administrator reviews and approves the recommendation.
+
+Show:
+- Requested quantity.
+- Available quantity.
+- Recommended allocation.
+- Remaining stock.
+- Unmet demand.
+- Allocation status.
+
+Compare the optimiser with a simple first-come-first-served baseline using the same test data.
+
+### MODULE 4 – GIS AND GEOAI DISASTER MONITORING
+
+Purpose:
+Provide geographical visibility of disaster incidents and relief resources.
+
+Use:
+- React Leaflet.
+- Leaflet.
+- OpenStreetMap.
+- PostgreSQL PostGIS.
+
+Map features:
+- Emergency incident markers.
+- Critical incident markers.
+- NGO locations.
+- Hospital locations.
+- Relief centre locations.
+- Volunteer locations, where authorised.
+- Resource shortage indicators.
+- Incident severity filters.
+- Search by area.
+- Map legend.
+- Incident detail popup.
+
+Marker categories:
+- Red: Critical incidents.
+- Orange: High-priority incidents.
+- Yellow: Medium-priority incidents.
+- Green: Relief centres.
+- Blue: Hospitals.
+- Purple: NGOs.
+
+Include a filter panel:
+- All incidents.
+- Critical.
+- High.
+- Medium.
+- Verified.
+- Pending verification.
+- Relief organisations.
+- Hospitals.
+
+Clicking a marker should display:
+- Incident ID.
+- Location.
+- Disaster category.
+- Priority.
+- Number of affected people.
+- Required resources.
+- Verification status.
+
+Do not use fabricated live disaster data. Clearly label demonstration locations and records as simulated.
+
+### MODULE 5 – PREDICTIVE RESOURCE DEMAND ANALYSIS
+
+Purpose:
+Estimate possible future resource requirements to support planning.
+
+Features:
+- Short-term demand estimation.
+- Food demand estimate.
+- Water demand estimate.
+- Medical supply demand estimate.
+- Shelter demand estimate.
+- Resource shortage estimate.
+- Historical/sample data analysis.
+- Prediction charts.
+- Explanation of assumptions.
+
+Forecast periods:
+- Next 6 hours.
+- Next 12 hours.
+- Next 24 hours.
+
+Example:
+Current verified water requirement: 1,000 units.
+
+Estimated additional demand over the next 12 hours: 300 units.
+
+Estimated total requirement: 1,300 units.
+
+Display:
+- Current demand.
+- Estimated demand.
+- Available inventory.
+- Expected shortage.
+- Confidence or uncertainty information.
+
+Start with a simple statistical baseline or regression model. Do not claim a validated disaster forecasting model without suitable data and evaluation.
+
+### MODULE 6 – DIGITAL TWIN DISASTER RESPONSE SIMULATOR
+
+Purpose:
+Allow administrators to explore hypothetical disaster-response situations before making allocation decisions.
+
+This is an operational scenario simulator, not a physical flood simulation engine.
+
+Inputs:
+- Disaster severity.
+- Estimated affected population.
+- Number of affected families.
+- Available water resources.
+- Available food resources.
+- Medical resource availability.
+- Road accessibility.
+- Volunteer availability.
+- Relief centre capacity.
+
+Scenario options:
+- Low-impact scenario.
+- Medium-impact scenario.
+- High-impact scenario.
+- Custom scenario.
+
+Outputs:
+- Estimated resource demand.
+- Potential shortages.
+- Available relief resources.
+- Allocation recommendations.
+- Potential delivery delays.
+- Comparison between scenarios.
+
+Example:
+
+Scenario A:
+- 500 affected families.
+- 80% road accessibility.
+- 1,000 water units available.
+
+Scenario B:
+- 1,000 affected families.
+- 40% road accessibility.
+- 1,000 water units available.
+
+Display the difference in demand, shortages and allocation recommendations using charts.
+
+Include a Reset Simulation button.
+
+### MODULE 7 – OFFLINE EMERGENCY REPORTING
+
+Purpose:
+Allow users to save emergency reports when internet connectivity is unavailable.
+
+Technology:
+- Progressive Web App.
+- Service Workers.
+- IndexedDB.
+
+Features:
+1. Cache essential application pages.
+2. Save report drafts locally.
+3. Generate unique client-side report IDs.
+4. Maintain pending reports.
+5. Retry synchronisation when connectivity returns.
+6. Prevent duplicate submissions using idempotency keys.
+7. Display sync status.
+
+Status indicators:
+- Saved Offline.
+- Pending Sync.
+- Syncing.
+- Synced.
+- Sync Failed.
+
+Only show Synced after the server confirms successful receipt.
+
+### MODULE 8 – RELIEF DELIVERY TRACKING
+
+Purpose:
+Provide visibility from resource allocation to delivery.
+
+Workflow:
+1. Emergency request verified.
+2. Resource recommendation generated.
+3. Coordinator approves allocation.
+4. NGO receives allocation.
+5. Shipment created.
+6. Shipment dispatched.
+7. Volunteer or delivery team updates progress.
+8. Delivery confirmation recorded.
+9. Inventory updated.
+10. Request marked fulfilled or partially fulfilled.
+
+Features:
+- Unique shipment ID.
+- QR code generation.
+- Shipment status.
+- Dispatch details.
+- Delivery confirmation.
+- Received quantity.
+- Pending quantity.
+- Delivery history.
+
+Shipment statuses:
+- Pending.
+- Approved.
+- Preparing.
+- Dispatched.
+- In Transit.
+- Delivered.
+- Partially Delivered.
+- Cancelled.
+
+---
+
+## 6. WEBSITE PAGES AND NAVIGATION
+
+### Public Website
+
+1. Home page.
+2. About CrisisWeave.
+3. How It Works.
+4. Features.
+5. Impact and SDG alignment.
+6. Contact.
+7. Login.
+8. Register.
+
+### Authentication Pages
+
+1. Login page.
+2. Registration page.
+3. Forgot password.
+4. Password reset.
+5. Role-based dashboard redirection.
+
+Registration should include:
+- Full name.
+- Email.
+- Phone number.
+- Password.
+- User role.
+- Organisation details where applicable.
+- Location where applicable.
+
+Do not allow anyone to register themselves as an administrator. Admin accounts should be created through a controlled setup process.
+
+### Citizen Pages
+
+- Citizen dashboard.
+- Submit emergency report.
+- My reports.
+- Report details.
+- Track request.
+- Notifications.
+- Profile.
+
+### NGO Pages
+
+- NGO dashboard.
+- Inventory.
+- Add resource.
+- Edit stock.
+- Incoming requests.
+- Allocations.
+- Shipments.
+- Delivery history.
+- Organisation profile.
+
+### Volunteer Pages
+
+- Volunteer dashboard.
+- Profile and skills.
+- Availability.
+- Assigned tasks.
+- Available tasks.
+- Task details.
+- Task history.
+
+### Hospital Pages
+
+- Hospital dashboard.
+- Medical inventory.
+- Bed capacity.
+- Medical requests.
+- Incoming allocations.
+- Hospital profile.
+
+### Admin Pages
+
+- Admin dashboard.
+- Incident management.
+- Report verification.
+- AI intelligence centre.
+- TrustShield security centre.
+- Resource management.
+- Resource allocation.
+- GIS disaster map.
+- Demand prediction.
+- Digital Twin simulator.
+- Shipment tracking.
+- User management.
+- Organisation management.
+- Analytics and reports.
+- Audit logs.
+- Settings.
+
+---
+
+## 7. HOMEPAGE DESIGN REQUIREMENTS
+
+The homepage should immediately communicate the purpose of CrisisWeave.
+
+### Navigation Bar
+
+Left:
+CrisisWeave logo and name.
+
+Right:
+- Home.
+- About.
+- Features.
+- How It Works.
+- Impact.
+- Login.
+- Get Started.
+
+### Hero Section
+
+Main heading:
+
+"Disasters Create Chaos. We Connect the Response."
+
+Subheading:
+
+"An intelligent disaster-response platform connecting affected communities, relief organisations and emergency coordinators through AI-powered insights, secure information and smarter resource coordination."
+
+Buttons:
+- Explore Platform.
+- Get Started.
+
+Hero visual:
+An elegant disaster-response command centre dashboard preview showing a map, incident markers and resource statistics.
+
+### Problem Section
+
+Title:
+"When Every Second Matters, Coordination Matters More."
+
+Explain:
+- Scattered emergency information.
+- Delayed identification of urgent needs.
+- Resource mismatch.
+- Lack of transparent tracking.
+
+### Solution Section
+
+Title:
+"One Connected Platform. A More Coordinated Response."
+
+Introduce the CrisisWeave workflow.
+
+### Feature Section
+
+Display the eight major modules.
+
+### How It Works Section
+
+Show six steps:
+
+1. Report.
+2. Analyse.
+3. Verify.
+4. Match.
+5. Dispatch.
+6. Track.
+
+### Impact Section
+
+Explain SDG 11, SDG 13 and SDG 17.
+
+### Footer
+
+Include:
+- Project name.
+- Project description.
+- Navigation links.
+- Contact details.
+- Social impact statement.
+- Copyright.
+
+---
+
+## 8. DASHBOARD UI DESIGN
+
+Create a professional, modern emergency-response dashboard.
+
+### Design direction
+
+Use a balanced light and dark visual system. The website should not be excessively dark or overly bright.
+
+Suggested colours:
+- Navy: #1E3043
+- Teal: #268A87
+- Light background: #F5F7F7
+- White: #FFFFFF
+- Muted text: #697780
+- Critical red: #D9534F
+- Warning orange: #E49B43
+- Success green: #39856D
+
+Typography:
+- Inter or Manrope.
+- Clear hierarchy.
+- Consistent font weights.
+- Readable data labels.
+
+Visual style:
+- Professional SaaS interface.
+- Clean sidebar.
+- Simple top navigation.
+- Subtle borders.
+- Small shadows.
+- Rounded cards.
+- Consistent spacing.
+- Clear charts.
+- Interactive maps.
+- Responsive layouts.
+
+Avoid:
+- Excessive gradients.
+- Too many glowing effects.
+- Unnecessary animations.
+- Giant decorative cards.
+- Random icons.
+- Generic AI-generated landing page layouts.
+- Excessive text inside dashboard cards.
+
+### Admin Dashboard Layout
+
+Sidebar:
+- Overview.
+- Incidents.
+- Verification.
+- Intelligence.
+- TrustShield.
+- Resources.
+- Allocation.
+- Live Map.
+- Predictions.
+- Digital Twin.
+- Shipments.
+- Organisations.
+- Volunteers.
+- Analytics.
+- Audit Logs.
+- Settings.
+
+Top bar:
+- Search.
+- Current disaster scenario selector.
+- Notifications.
+- Administrator profile.
+
+Main dashboard:
+- Statistics cards.
+- Incident priority overview.
+- Recent emergency reports.
+- Resource availability.
+- Resource shortage chart.
+- Map preview.
+- Pending approvals.
+- Recent activity.
+
+---
+
+## 9. DATABASE DESIGN
+
+Use PostgreSQL with PostGIS.
+
+Create the following database tables.
+
+### users
+- id
+- full_name
+- email
+- phone
+- password_hash
+- role
+- is_active
+- created_at
+
+### organisations
+- id
+- user_id
+- organisation_name
+- organisation_type
+- address
+- latitude
+- longitude
+- contact_number
+- verification_status
+
+### volunteers
+- id
+- user_id
+- skills
+- availability
+- current_location
+- experience
+
+### emergency_reports
+- id
+- user_id
+- disaster_type
+- description
+- latitude
+- longitude
+- affected_people
+- urgency
+- ai_category
+- ai_priority
+- verification_status
+- created_at
+
+### incidents
+- id
+- incident_name
+- disaster_type
+- description
+- latitude
+- longitude
+- severity
+- status
+- created_at
+
+### incident_reports
+- id
+- incident_id
+- report_id
+- similarity_score
+
+### report_evidence
+- id
+- report_id
+- file_path
+- file_hash
+- file_type
+- uploaded_at
+
+### verification_records
+- id
+- report_id
+- reviewer_id
+- decision
+- reason
+- reviewed_at
+
+### anomaly_flags
+- id
+- report_id
+- flag_type
+- risk_level
+- description
+- review_status
+- created_at
+
+### resources
+- id
+- resource_name
+- category
+- unit
+
+### inventory
+- id
+- organisation_id
+- resource_id
+- quantity_available
+- updated_at
+
+### resource_requests
+- id
+- incident_id
+- resource_id
+- quantity_required
+- quantity_fulfilled
+- priority
+- status
+- created_at
+
+### allocations
+- id
+- request_id
+- organisation_id
+- resource_id
+- allocated_quantity
+- approved_by
+- status
+- created_at
+
+### shipments
+- id
+- allocation_id
+- shipment_code
+- dispatched_at
+- delivered_at
+- status
+- received_quantity
+
+### assignments
+- id
+- volunteer_id
+- incident_id
+- task_description
+- status
+- assigned_at
+
+### predictions
+- id
+- incident_id
+- resource_id
+- prediction_period
+- predicted_quantity
+- confidence
+- assumptions
+- created_at
+
+### simulations
+- id
+- scenario_name
+- input_parameters
+- result_data
+- created_by
+- created_at
+
+### audit_logs
+- id
+- actor_id
+- action
+- entity_type
+- entity_id
+- created_at
+
+Use foreign keys, indexes, timestamps and appropriate constraints.
+
+Use PostGIS geography or geometry columns for geographical queries where appropriate.
+
+---
+
+## 10. TECHNICAL ARCHITECTURE
+
+### Frontend
+
+- React.js.
+- Vite.
+- JavaScript.
+- Tailwind CSS.
+- React Router.
+- Axios.
+- Recharts.
+- React Leaflet.
+- Leaflet.
+- Socket.IO Client.
+- IndexedDB.
+
+### Backend
+
+- Python.
+- Flask.
+- Flask REST APIs.
+- Flask-SocketIO.
+- Flask-SQLAlchemy.
+- Flask-Migrate.
+- Flask-CORS.
+- Flask-Limiter.
+
+### Database
+
+- PostgreSQL.
+- PostGIS.
+
+### Artificial Intelligence
+
+- Python.
+- NumPy.
+- Pandas.
+- Scikit-learn.
+- NLP.
+- Text similarity.
+- Optional sentence-transformers.
+
+### Optimisation
+
+- Google OR-Tools.
+
+### Cybersecurity
+
+- Password hashing.
+- Role-based access control.
+- Secure session management.
+- Request validation.
+- Rate limiting.
+- File validation.
+- SHA-256 evidence hashing.
+- Audit logging.
+
+### Mapping
+
+- OpenStreetMap.
+- Leaflet.
+- PostGIS.
+
+### Testing
+
+- pytest.
+- React testing tools.
+- Browser-based functional testing.
+
+---
+
+## 11. SYSTEM ARCHITECTURE
+
+The system must follow this architecture:
+
+Layer 1 – User Interface:
+React web application with role-specific dashboards.
+
+Layer 2 – API Layer:
+Flask REST APIs for authentication, reports, inventory, allocations, users and shipments.
+
+Layer 3 – Business Logic:
+- AI classification service.
+- Duplicate detection service.
+- Priority scoring service.
+- TrustShield service.
+- Resource optimisation service.
+- Prediction service.
+- Digital Twin service.
+- Offline synchronisation service.
+
+Layer 4 – Data Layer:
+PostgreSQL and PostGIS.
+
+Layer 5 – Real-time Communication:
+Flask-SocketIO for relevant status updates and notifications.
+
+Flow:
+
+User → React Frontend → Flask API → Application Services → PostgreSQL/PostGIS → Response to Frontend.
+
+---
+
+## 12. IMPORTANT API ENDPOINTS
+
+Authentication:
+- POST /api/auth/register
+- POST /api/auth/login
+- POST /api/auth/logout
+- GET /api/auth/me
+
+Emergency reports:
+- POST /api/reports
+- GET /api/reports
+- GET /api/reports/:id
+- PUT /api/reports/:id
+- POST /api/reports/:id/evidence
+- POST /api/reports/:id/verify
+
+Incidents:
+- GET /api/incidents
+- POST /api/incidents
+- GET /api/incidents/:id
+- PUT /api/incidents/:id
+
+AI:
+- POST /api/ai/classify
+- POST /api/ai/duplicate-check
+- POST /api/ai/priority-score
+
+Inventory:
+- GET /api/inventory
+- POST /api/inventory
+- PUT /api/inventory/:id
+
+Resource requests:
+- POST /api/resource-requests
+- GET /api/resource-requests
+- GET /api/resource-requests/:id
+
+Optimisation:
+- POST /api/optimisation/recommend
+- GET /api/optimisation/results/:id
+- POST /api/allocations/:id/approve
+
+GIS:
+- GET /api/map/incidents
+- GET /api/map/organisations
+- GET /api/map/relief-centres
+
+Predictions:
+- POST /api/predictions/generate
+- GET /api/predictions
+
+Digital Twin:
+- POST /api/simulations
+- GET /api/simulations
+- GET /api/simulations/:id
+
+Shipments:
+- POST /api/shipments
+- GET /api/shipments
+- PUT /api/shipments/:id/status
+- POST /api/shipments/:id/confirm-delivery
+
+Audit:
+- GET /api/audit-logs
+
+Use proper authentication, authorisation, validation and error handling for every endpoint. Do not expose sensitive information to unauthorised users.
+
+---
+
+## 13. COMPLETE END-TO-END WORKFLOW
+
+1. A citizen registers and logs in.
+2. The citizen submits an emergency report.
+3. The backend validates and stores the report.
+4. AI classifies the report.
+5. The system checks for similar reports.
+6. The priority engine suggests a priority level.
+7. TrustShield checks the report and evidence for unusual patterns.
+8. The administrator reviews the report.
+9. The administrator verifies the incident.
+10. The incident appears on the GIS map.
+11. Resource requirements are created.
+12. NGOs update available stock.
+13. The optimisation engine recommends resource matches.
+14. The administrator reviews and approves the allocation.
+15. An NGO prepares the supplies.
+16. A shipment is created.
+17. A volunteer or delivery team updates shipment progress.
+18. Delivery is confirmed.
+19. Inventory and request quantities are updated.
+20. The dashboard reflects the completed operation.
+
+---
+
+## 14. HACKATHON DEMONSTRATION SCENARIO
+
+Use a simulated Chennai flood scenario.
+
+Important: Clearly label all locations, incidents, inventory and results as sample demonstration data.
+
+Scenario:
+
+A flood affects several areas of Chennai.
+
+Step 1:
+A citizen submits an emergency request reporting that 20 families need drinking water and food.
+
+Step 2:
+AI analyses the description and identifies the likely resource requirements.
+
+Step 3:
+A second similar report is submitted. The system identifies it as a potential duplicate and links it to the same incident for coordinator review.
+
+Step 4:
+TrustShield detects repeated evidence or unusual submission patterns and flags them for manual review.
+
+Step 5:
+The administrator verifies the incident.
+
+Step 6:
+The GIS map displays the incident and nearby registered relief organisations.
+
+Step 7:
+The resource optimisation engine checks available inventory.
+
+Step 8:
+The system recommends which NGOs can supply the requested resources.
+
+Step 9:
+The administrator approves the allocation.
+
+Step 10:
+The NGO updates shipment status.
+
+Step 11:
+A volunteer confirms delivery.
+
+Step 12:
+The administrator opens the Digital Twin simulator and increases the number of affected families while reducing road accessibility.
+
+Step 13:
+The system displays the new estimated demand and possible resource shortages.
+
+Step 14:
+Demonstrate offline report saving and synchronisation.
+
+The complete demonstration should prove that CrisisWeave connects the entire relief workflow.
+
+---
+
+## 15. PROJECT DEVELOPMENT ROADMAP
+
+### Week 1 – Foundation
+- Create frontend and backend projects.
+- Set up PostgreSQL.
+- Create database models.
+- Implement authentication.
+- Implement user roles.
+- Create public homepage.
+- Create citizen dashboard.
+- Implement emergency reporting.
+- Implement admin dashboard.
+
+### Week 2 – Core Intelligence and Security
+- Implement AI report classification.
+- Implement duplicate detection.
+- Implement priority scoring.
+- Create TrustShield.
+- Implement evidence validation.
+- Create audit logs.
+- Build NGO inventory.
+- Build report verification workflow.
+
+### Week 3 – Advanced Features
+- Implement resource allocation.
+- Integrate OR-Tools.
+- Create GIS dashboard.
+- Add demand estimation.
+- Build Digital Twin simulation.
+- Add real-time notifications.
+
+### Week 4 – Final Integration
+- Implement offline emergency reporting.
+- Add delivery tracking.
+- Integrate QR codes.
+- Test all user roles.
+- Test security and data validation.
+- Add sample data.
+- Improve UI responsiveness.
+- Prepare final demonstration.
+
+---
+
+## 16. PROJECT FOLDER STRUCTURE
+
+CrisisWeave/
+│
+├── frontend/
+│   ├── public/
+│   │   ├── logo.png
+│   │   └── manifest.json
+│   │
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── StatCard.jsx
+│   │   │   ├── IncidentCard.jsx
+│   │   │   ├── MapView.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Home.jsx
+│   │   │   ├── About.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── CitizenDashboard.jsx
+│   │   │   ├── NGODashboard.jsx
+│   │   │   ├── VolunteerDashboard.jsx
+│   │   │   ├── HospitalDashboard.jsx
+│   │   │   └── AdminDashboard.jsx
+│   │   │
+│   │   ├── features/
+│   │   │   ├── reports/
+│   │   │   ├── incidents/
+│   │   │   ├── inventory/
+│   │   │   ├── allocation/
+│   │   │   ├── trustshield/
+│   │   │   ├── predictions/
+│   │   │   ├── simulation/
+│   │   │   ├── shipments/
+│   │   │   └── offline/
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   │
+│   │   ├── hooks/
+│   │   ├── context/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   └── package.json
+│
+├── backend/
+│   ├── app/
+│   │   ├── routes/
+│   │   ├── models/
+│   │   ├── services/
+│   │   │   ├── ai_service.py
+│   │   │   ├── duplicate_service.py
+│   │   │   ├── priority_service.py
+│   │   │   ├── trustshield_service.py
+│   │   │   ├── optimisation_service.py
+│   │   │   ├── prediction_service.py
+│   │   │   └── simulation_service.py
+│   │   │
+│   │   ├── utils/
+│   │   ├── config.py
+│   │   └── __init__.py
+│   │
+│   ├── migrations/
+│   ├── tests/
+│   ├── run.py
+│   ├── requirements.txt
+│   └── .env
+│
+├── docs/
+│   ├── project_documentation.md
+│   ├── database_design.md
+│   └── api_documentation.md
+│
+└── README.md
+
+---
+
+## 17. IMPORTANT SECURITY REQUIREMENTS
+
+- Never store plaintext passwords.
+- Never expose secret keys in frontend code.
+- Use environment variables.
+- Validate all inputs on the backend.
+- Protect administrator routes.
+- Restrict user access by role and resource ownership.
+- Validate uploaded files.
+- Restrict upload size.
+- Use secure session settings.
+- Apply rate limiting.
+- Maintain audit logs for sensitive actions.
+- Use database transactions for stock and allocation updates.
+- Prevent duplicate offline submissions through idempotency keys.
+- Do not trust values calculated only in the frontend.
+- Do not expose private citizen details on public maps.
+
+---
+
+## 18. EXPECTED FINAL OUTPUT
+
+The final website must include:
+
+1. Professional public homepage.
+2. Working registration and login.
+3. Five role-based dashboards.
+4. Emergency report submission.
+5. AI-assisted report classification.
+6. Potential duplicate detection.
+7. Explainable priority scoring.
+8. TrustShield security dashboard.
+9. NGO resource inventory.
+10. Resource allocation recommendations.
+11. Interactive GIS map.
+12. Demand estimation dashboard.
+13. Digital Twin simulation.
+14. Offline reporting and sync status.
+15. Shipment and delivery tracking.
+16. Notifications.
+17. Analytics and audit logs.
+18. Responsive design.
+19. Sample demonstration data.
+20. Proper project documentation.
+
+---
+
+## 19. IMPORTANT DEVELOPMENT RULES
+
+1. Build a working application, not just static UI mockups.
+2. Connect the frontend to a real backend and database.
+3. Use role-based authentication and protected routes.
+4. Keep the code modular and easy to maintain.
+5. Create reusable components.
+6. Use realistic sample data for the demonstration.
+7. Do not claim that simulated data is live disaster information.
+8. Do not pretend an AI feature is functional if it only displays a hardcoded result.
+9. Implement a simple working version before adding advanced models.
+10. Ensure the main report-to-delivery workflow works end to end.
+11. Provide clear setup instructions.
+12. Test all user roles.
+13. Keep the design professional and consistent.
+14. Use meaningful error messages and loading states.
+15. Never leave important buttons non-functional.
+
+### Final instruction
+
+Build CrisisWeave as a complete, professional, advanced hackathon prototype.
+
+Prioritise functionality, usability, reliability and meaningful innovation over decorative UI.
+
+The most important demonstration is the complete journey:
+
+Emergency Report → AI Analysis → Trust Review → Incident Verification → Resource Optimisation → Coordinator Approval → Shipment → Delivery Confirmation.
+
+The website should demonstrate how AI, cybersecurity and intelligent coordination can work together to improve disaster relief operations.
